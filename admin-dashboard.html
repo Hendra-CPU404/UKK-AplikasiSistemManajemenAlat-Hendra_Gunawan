@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - PinjamAlat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-bg">
+
+    <div class="dash-container">
+        <aside class="sidebar-min">
+            <div class="brand">Admin<span>Panel</span></div>
+            <nav id="sideNav">
+                <a href="#" onclick="showContent('Dashboard')" class="active">Dashboard</a>
+                
+                <div class="menu-group">Master Data</div>
+                <a href="#" onclick="showContent('Data Alat')">Data Alat</a>
+                <a href="#" onclick="showContent('Data User')">Data User</a>
+                <a href="#" onclick="showContent('Kategori')">Kategori</a>
+                
+                <div class="menu-group">Transaksi</div>
+                <a href="#" onclick="showContent('Alat Masuk')">Alat Masuk</a>
+                <a href="#" onclick="showContent('Peminjaman')">Peminjaman</a>
+                <a href="#" onclick="showContent('Pengembalian')">Pengembalian</a>
+                
+                <div class="menu-group">Lainnya</div>
+                <a href="#" onclick="showContent('Log Aktivitas')">Log Aktivitas</a>
+                <a href="index.html" class="out">Keluar</a>
+            </nav>
+        </aside>
+
+        <main class="main-blank">
+            <header>
+                <h2 id="contentTitle">Dashboard</h2>
+                <hr>
+            </header>
+            <div class="placeholder">
+                <h1 id="contentText">Dashboard</h1>
+                <p>Silakan pilih menu di samping untuk melihat detail.</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showContent(menuName) {
+            // Mencegah error 'event is not defined' di beberapa browser
+            const currentEvent = window.event || event; 
+            
+            document.getElementById('contentTitle').innerText = menuName;
+            document.getElementById('contentText').innerText = menuName;
+            
+            const links = document.querySelectorAll('#sideNav a');
+            links.forEach(link => link.classList.remove('active'));
+            
+            if (currentEvent && currentEvent.currentTarget) {
+                currentEvent.currentTarget.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+/* =========================================
+   1. RESET & BASE STYLES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+/* =========================================
+   2. LANDING PAGE STYLES
+   ========================================= */
+nav.navbar-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+nav.navbar-main ul {
+    display: flex;
+    list-style: none;
+}
+
+nav.navbar-main ul li {
+    margin-left: 20px;
+}
+
+nav.navbar-main ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 5%;
+    background: #fff;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.hero p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 5%;
+    gap: 20px;
+}
+
+.item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* =========================================
+   3. LOGIN & REGISTER STYLES
+   ========================================= */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+}
+
+.login-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.input-group input, .select-role {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+.cta, .btn-login {
+    background: #2563eb;
+    color: #fff !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.full-width { width: 100%; }
+
+/* =========================================
+   4. DASHBOARD ADMIN STYLES
+   ========================================= */
+.dash-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar-min {
+    width: 250px;
+    background: #1e293b;
+    color: white;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    padding: 30px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.brand span { color: #3b82f6; }
+
+#sideNav {
+    display: flex;
+    flex-direction: column;
+}
+
+#sideNav a {
+    display: block;
+    color: #cbd5e1;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#sideNav a:hover, #sideNav a.active {
+    background: #334155;
+    color: white;
+}
+
+#sideNav a.active { background: #2563eb; }
+
+.menu-group {
+    padding: 20px 25px 5px;
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-blank {
+    flex-grow: 1;
+    padding: 40px;
+    background: #f8fafc;
+}
+
+.placeholder {
+    background: white;
+    padding: 100px 20px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.out { color: #f87171 !important; }
+
+/* Logo Styling untuk Landing Page & Login */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb; /* Warna Biru untuk kata 'Pinjam' */
+    text-decoration: none;
+}
+
+.logo span {
+    color: #333; /* Warna Hitam/Gelap untuk kata 'Alat' */
+}
+
+/* Memastikan Brand di Sidebar Dashboard juga rapi */
+.brand {
+    padding: 30px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.brand span {
+    color: #3b82f6;
+}
+
+/* Animasi Khusus Tombol Mulai Sekarang */
+.btn-mulai {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px !important;
+    font-size: 18px;
+    border-radius: 50px !important; /* Membuat tombol lonjong/rounded modern */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-mulai:hover {
+    transform: translateY(-3px); /* Tombol sedikit naik saat di-hover */
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+    background-color: #1d4ed8;
+}
+
+.panah {
+    transition: transform 0.3s ease;
+}
+
+.btn-mulai:hover .panah {
+    transform: translateX(8px); /* Panah bergeser ke kanan saat di-hover */
+}
+
+/* Tambahan: Warna gradasi lembut pada teks hero agar lebih modern */
+.hero h1 span {
+    color: #2563eb;
+    display: block;
+}

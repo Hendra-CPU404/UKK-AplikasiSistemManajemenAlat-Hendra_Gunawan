@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - PinjamAlat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">Pinjam<span>Alat</span></div>
+            <h2>Buat Akun Baru</h2>
+            <p>Daftar sekarang untuk mulai meminjam alat</p>
+
+            <form id="registerForm">
+                <div class="input-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Buat username" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Minimal 8 karakter" required>
+                </div>
+
+                <button type="submit" class="cta full-width">Daftar Sekarang</button>
+            </form>
+            
+            <p class="footer-text">Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+            <p class="footer-text"><a href="index.html">← Kembali ke Beranda</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Pendaftaran Berhasil! Silakan Login menggunakan akun yang baru dibuat.');
+            window.location.href = 'login.html';
+        });
+    </script>
+
+</body>
+</html>
